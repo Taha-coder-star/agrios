@@ -6,8 +6,8 @@ Interview answers: enforce the project's research-integrity rules plus test cove
 security; **block** on the floor and the integrity rules, **warn** on everything else until Day
 5; measure and hold (no invented numbers); ≤ 90 s for task-end checks.
 
-Status: no code exists yet. Every tool below is installed by the Day 1 venv
-(`requirements-dev.txt`). Until then, only the floor applies, through review of `git diff`.
+Status: tools installed in `.venv` (Python 3.12) from `requirements-dev.txt`. Ruff, pytest and
+coverage run today. Gitleaks and osv-scanner are CI-only and not set up yet.
 
 ## Floor (always enforced, no setup required)
 
@@ -52,8 +52,8 @@ Notebooks, `app/` and model architectures are exempt from coverage. Their check 
 
 | Metric | Today | Direction |
 |--------|-------|-----------|
-| Project coverage | n/a (no code) | record on Day 2, must not fall |
-| `pytest -q` wall time | n/a | record on Day 2, keep < 90 s |
+| Project coverage | 99% (2026-10-19, T1–T4) | must not fall below 95% |
+| `pytest -q` wall time | 4.6 s (2026-10-19) | keep < 90 s |
 
 ## Exceptions
 

@@ -13,7 +13,7 @@ Source plan: `PLAN.md` (corrected 10-day plan). Hard rules: `CLAUDE.md`. Quality
    models only.
 4. This is an FYP research codebase, not a production service. "Ship" means a reproducible repo,
    a report and a Gradio demo, not a deployment.
-5. Python 3.11. Dependencies are pinned in `requirements.txt`, dev tools in
+5. Python 3.12. Dependencies are pinned in `requirements.txt`, dev tools in
    `requirements-dev.txt`.
 6. The files are already dark/white calibrated by the camera software. Verify on Day 1.
 7. Whether the controls were mock-inoculated is **unknown**. The paper describes only the
@@ -46,7 +46,7 @@ Build order: `data` → `evaluation` → `classical` → `bands` / `deep` → `e
 `classical`, and so on.
 
 ## Tech stack
-Python 3.11 · NumPy · SciPy · scikit-learn · XGBoost · PyTorch · tifffile · matplotlib · SHAP ·
+Python 3.12 · NumPy · SciPy · scikit-learn · XGBoost · PyTorch · tifffile · matplotlib · SHAP ·
 Gradio · PyYAML. Dev: pytest · pytest-cov · ruff.
 
 ## Commands

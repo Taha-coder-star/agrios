@@ -8,7 +8,7 @@ Sizes: S = 1–2 files, M = 3–5 files.
 
 ## Phase 1: Foundation (no data needed) · `day-01-setup`
 
-- [ ] **T1: Environment and skeleton** (S/M · deps: none)
+- [x] **T1: Environment and skeleton** (S/M · deps: none)
   - Acceptance: `requirements.txt` (pinned), `requirements-dev.txt` (pytest, pytest-cov,
     ruff), `pyproject.toml` with ruff config (`I`, `B`) and the `requires_data` marker;
     `src/` package dirs per CLAUDE.md; `tests/conftest.py` with a synthetic index and a small
@@ -18,7 +18,7 @@ Sizes: S = 1–2 files, M = 3–5 files.
   - Files: `requirements*.txt`, `pyproject.toml`, `src/**/__init__.py`, `tests/conftest.py`,
     `PROGRESS.md`
 
-- [ ] **T2: Pot-level splits** (S · deps: T1)
+- [x] **T2: Pot-level splits** (S · deps: T1)
   - Acceptance: `make_splits(index, seed)` returns a single 8/2/2 split + 6 outer folds, each
     with an inner validation pair (1 inoculated + 1 control), keyed by `(experiment, pot_id)`
     and written to JSON. CLI `python -m src.data.splits`.
@@ -26,14 +26,14 @@ Sizes: S = 1–2 files, M = 3–5 files.
     balance per DPI, every pot appearing as test exactly once, and determinism under a seed.
   - Files: `src/data/splits.py`, `tests/test_splits.py`
 
-- [ ] **T3: Evaluation core** (S · deps: T1)
+- [x] **T3: Evaluation core** (S · deps: T1)
   - Acceptance: `per_dpi_f1`, `per_dpi_pot_accuracy`, `pot_bootstrap_ci(oof, metric, n=2000)`
     (resamples pots, not images), and a `metrics.json`/`per_dpi.csv` writer.
   - Verify: `pytest tests/test_evaluation.py`, covering R5 (output has every DPI) and R6
     (synthetic case: duplicate images within a pot don't narrow the CI; known-answer check).
   - Files: `src/evaluation.py`, `tests/test_evaluation.py`
 
-- [ ] **T4: Leakage-safe preprocessing** (S · deps: T1)
+- [x] **T4: Leakage-safe preprocessing** (S · deps: T1)
   - Acceptance: a `BandScaler` with `fit(X[train_idx])`/`transform`, and an
     `OutlierFilter(threshold=0.85)` that fits on training spectra only and reports
     `n_removed`. No API accepts a whole dataset without indices.
@@ -42,9 +42,9 @@ Sizes: S = 1–2 files, M = 3–5 files.
   - Files: `src/features/preprocess.py`, `tests/test_leakage.py`
 
 ### Checkpoint A
-- [ ] `ruff` + `pytest -q` green; record project coverage and test wall time in CONSTRAINTS
+- [x] `ruff` + `pytest -q` green; record project coverage and test wall time in CONSTRAINTS
   "Measured" table
-- [ ] Commit on `day-01-setup`
+- [x] Commit on `day-01-setup`
 
 ## Phase 2: Data · `day-01-setup` → `day-02-pipeline`
 

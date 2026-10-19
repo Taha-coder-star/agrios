@@ -1,0 +1,11 @@
+numpy==2.5.4
+scipy==1.18.1
+pandas==3.0.6
+scikit-learn==1.9.1
+xgboost==3.4.1
+torch==2.14.1
+tifffile==2026.10.15
+matplotlib==3.11.2
+shap==0.54.1
+gradio==6.30.0
+PyYAML==6.0.3

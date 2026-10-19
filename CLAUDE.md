@@ -86,5 +86,5 @@ notebooks/          # EDA and figures only
 results/  app/  tests/  report/
 ```
 
-Stack: Python 3.11, NumPy, SciPy, scikit-learn, XGBoost, PyTorch, tifffile, matplotlib, SHAP,
+Stack: Python 3.12, NumPy, SciPy, scikit-learn, XGBoost, PyTorch, tifffile, matplotlib, SHAP,
 Gradio. Dev: pytest, pytest-cov, ruff. Kaggle/Colab GPU if there's no local GPU.
