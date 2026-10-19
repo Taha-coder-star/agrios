@@ -1,6 +1,6 @@
 # Spec: Pre-Symptomatic Wheat Stem Rust Detection
 
-Status: **DRAFT v2, awaiting approval** · 2026-10-19 · @taha
+Status: **v2, approved 2026-10-19** · @taha · Tasks: `tasks/plan.md`, `tasks/todo.md`
 Source plan: `PLAN.md` (corrected 10-day plan). Hard rules: `CLAUDE.md`. Quality bar:
 `CONSTRAINTS.md`.
 
